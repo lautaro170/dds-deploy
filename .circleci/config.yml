@@ -26,3 +26,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+  maven_test:
+    jobs:
+      - maven/test
