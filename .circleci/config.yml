@@ -2,6 +2,12 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+orbs:
+  maven: circleci/maven@1.4.1
+executors:
+  java17:
+    docker:
+      - image: 'cimg/openjdk:17.0'
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -28,4 +34,3 @@ workflows:
   say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - say-hello
